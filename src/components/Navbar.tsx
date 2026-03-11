@@ -1,5 +1,5 @@
-import { Terminal } from "lucide-react";
 import { motion } from "framer-motion";
+import BrandLogo from "@/components/BrandLogo";
 
 const Navbar = () => {
   return (
@@ -10,12 +10,9 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/60 backdrop-blur-2xl"
     >
       <div className="container px-6 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
-            <Terminal className="w-4 h-4 text-primary" />
-          </div>
-          <span className="font-mono font-bold">DevOps Architect</span>
-        </div>
+        <a href="#" aria-label="DevOps Provider home" className="flex items-center">
+          <BrandLogo className="h-12 w-auto object-contain" />
+        </a>
         <div className="hidden md:flex items-center gap-8">
           <a href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300">Services</a>
           <a href="#case-studies" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300">Case Studies</a>

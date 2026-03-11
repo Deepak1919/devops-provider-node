@@ -1,4 +1,4 @@
-import { Terminal } from "lucide-react";
+import BrandLogo from "@/components/BrandLogo";
 
 const Footer = () => {
   return (
@@ -6,11 +6,8 @@ const Footer = () => {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-primary/5 rounded-full blur-[100px]" />
       <div className="container px-6 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
-              <Terminal className="w-4 h-4 text-primary" />
-            </div>
-            <span className="font-mono font-bold text-lg">DevOps Architect</span>
+          <div className="flex items-center justify-center mb-6">
+            <BrandLogo className="h-20 w-auto object-contain" />
           </div>
           <p className="text-muted-foreground text-sm mb-8">
             Kubernetes & DevOps consulting for teams that ship.
