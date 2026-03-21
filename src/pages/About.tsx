@@ -25,9 +25,9 @@ const principles = [
 ];
 
 const milestones = [
-  "Cloud-native architecture design for product teams scaling from early growth to enterprise workloads.",
+  "Hybrid infrastructure design across on-prem environments, private cloud, and public cloud workloads.",
   "CI/CD modernization focused on safer releases, shorter feedback loops, and lower operational drag.",
-  "Security and observability foundations that help engineering teams ship faster with fewer production surprises.",
+  "Security and observability foundations delivered by a team with 10+ years of real-world platform experience.",
 ];
 
 const About = () => {
@@ -52,7 +52,8 @@ const About = () => {
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
               DevOps Provider works with product and platform teams that need cleaner release pipelines,
-              stronger Kubernetes operations, and infrastructure decisions that hold up as the business grows.
+              stronger Kubernetes operations, and infrastructure decisions that hold up across on-prem
+              and cloud environments as the business grows.
             </p>
           </motion.div>
         </section>
@@ -94,11 +95,13 @@ const About = () => {
               <p className="mt-5 text-base leading-8 text-muted-foreground">
                 Our approach is direct: understand the current bottleneck, fix the systems creating risk,
                 and leave behind an operating model the internal team can sustain. That includes infrastructure,
-                release automation, observability, cost-awareness, and the standards needed to keep delivery predictable.
+                release automation, observability, cost-awareness, and the standards needed to keep delivery
+                predictable across on-prem and cloud platforms.
               </p>
               <p className="mt-5 text-base leading-8 text-muted-foreground">
-                We work best with teams that want execution quality, not presentation decks. The goal is measurable
-                improvement in deployment confidence, platform reliability, and engineering throughput.
+                We work best with teams that want execution quality, not presentation decks. Our team brings
+                10+ years of hands-on experience focused on measurable improvement in deployment confidence,
+                platform reliability, and engineering throughput.
               </p>
             </motion.div>
 

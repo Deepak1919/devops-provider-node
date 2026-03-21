@@ -1,63 +1,42 @@
 import { Check, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
-
-const packages = [
-  {
-    name: "Kubernetes Audit",
-    timeline: "5 days",
-    deliverable: "Security & cost review + roadmap",
-    price: "$3-5K",
-    features: ["Cluster security scan", "Cost optimization report", "Architecture roadmap", "Executive summary"],
-    popular: false,
-  },
-  {
-    name: "CI/CD Accelerator",
-    timeline: "2 weeks",
-    deliverable: "Production-ready pipeline",
-    price: "$8-12K",
-    features: ["GitOps pipeline setup", "Automated testing", "Rollback strategies", "Team training session"],
-    popular: true,
-  },
-  {
-    name: "Platform Build",
-    timeline: "4-6 weeks",
-    deliverable: "Complete K8s platform + training",
-    price: "$20-35K",
-    features: ["Full K8s platform", "Monitoring & alerting", "Runbooks & docs", "2 weeks of support"],
-    popular: false,
-  },
-  {
-    name: "Fractional DevOps",
-    timeline: "Monthly",
-    deliverable: "Ongoing SRE support",
-    price: "$5-8K/mo",
-    features: ["Dedicated SRE hours", "Incident response", "Continuous optimization", "Quarterly reviews"],
-    popular: false,
-  },
-];
+import { servicePackages } from "@/data/services";
 
 const ServicesSection = () => {
   return (
     <section id="services" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-radial opacity-50" />
       <div className="container px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <p className="font-mono text-sm text-primary mb-3">// services.list()</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Productized <span className="text-primary text-glow-green">Packages</span>
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Clear scope. Fixed timelines. No surprises.
-          </p>
-        </motion.div>
+        <div className="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl"
+          >
+            <p className="font-mono text-sm text-primary mb-3">// services.list()</p>
+            <h2 className="text-3xl font-bold md:text-4xl">
+              Productized packages for teams that want <span className="text-primary text-glow-green">execution</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Defined scope, fixed timelines, and delivery work that maps to the actual platform problem.
+            </p>
+          </motion.div>
+
+          <motion.a
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.08 }}
+            href="/services"
+            className="inline-flex items-center justify-center rounded-xl border border-border px-5 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/30 hover:bg-secondary"
+          >
+            View Full Services Page
+          </motion.a>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {packages.map((pkg, i) => (
+          {servicePackages.map((pkg, i) => (
             <motion.div
               key={pkg.name}
               initial={{ opacity: 0, y: 30 }}

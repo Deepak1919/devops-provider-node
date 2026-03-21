@@ -13,7 +13,7 @@ const Footer = () => {
           </div>
 
           <p className="text-muted-foreground text-sm mb-6">
-            Kubernetes & DevOps consulting for teams that ship.
+            On-prem and cloud DevOps consulting backed by a team with 10+ years of experience.
           </p>
 
           {/* Contact Details */}

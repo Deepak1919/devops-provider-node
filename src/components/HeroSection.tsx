@@ -1,112 +1,191 @@
-import { ArrowRight, Terminal } from "lucide-react";
+import { ArrowRight, GitBranch, Radar, ShieldCheck, Terminal } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+const heroStats = [
+  { value: "10+ yrs", label: "Team experience" },
+  { value: "On-prem + cloud", label: "Infrastructure focus" },
+  { value: "8m", label: "Typical deploy window" },
+];
+
+const releaseChecks = [
+  "Pre-deploy validation and rollback paths",
+  "GitOps promotion across environments",
+  "SRE playbooks teams can actually use",
+];
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background effects */}
+    <section className="relative overflow-hidden pt-24">
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute inset-0 bg-gradient-radial" />
-      
-      {/* Floating orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px] animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-accent/5 rounded-full blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
-      
-      <div className="container relative z-10 px-6 py-24 md:py-32">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Terminal prompt */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-border bg-card/60 backdrop-blur-sm mb-8 font-mono text-sm"
-          >
-            <Terminal className="w-4 h-4 text-primary" />
-            <span className="text-muted-foreground">$</span>
-            <span className="text-primary">kubectl</span>
-            <span className="text-foreground">get peace-of-mind</span>
-            <span className="terminal-cursor text-primary">▋</span>
-          </motion.div>
+      <div
+        className="absolute left-[-8rem] top-24 h-72 w-72 rounded-full bg-accent/10 blur-[120px] animate-float"
+        style={{ animationDelay: "1s" }}
+      />
+      <div className="absolute right-[-6rem] top-32 h-96 w-96 rounded-full bg-primary/10 blur-[140px] animate-float" />
 
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight mb-6"
-          >
-            Deploy Faster.{" "}
-            <span className="text-primary text-glow-green relative">
-              Sleep Better.
-              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
-                <path d="M2 8C50 2 100 2 150 6C200 10 250 4 298 8" stroke="hsl(142 72% 50%)" strokeWidth="2" strokeLinecap="round" opacity="0.4" />
-              </svg>
-            </span>
-            <br />
-            Scale Smarter.
-          </motion.h1>
-
-          {/* Subhead */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
-          >
-            Kubernetes & DevOps consulting for product teams ready to move from{" "}
-            <span className="text-foreground font-medium">chaos</span> to{" "}
-            <span className="text-primary font-medium">automation</span>.
-          </motion.p>
-
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <a
-              href="#contact"
-              className="group relative inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-xl hover:scale-105 transition-all duration-300 border-glow-green animate-pulse-glow text-base"
+      <div className="container relative z-10 px-6 py-16 md:py-24 lg:py-28">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45 }}
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-5 py-2.5 font-mono text-sm backdrop-blur-sm"
             >
-              Book Free Architecture Review
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
-              href="#case-studies"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground font-medium rounded-xl hover:bg-secondary hover:border-primary/30 transition-all duration-300 text-base glass-card"
-            >
-              See Case Studies
-            </a>
-          </motion.div>
+              <Terminal className="h-4 w-4 text-primary" />
+              <span className="text-muted-foreground">$</span>
+              <span className="text-primary">kubectl</span>
+              <span className="text-foreground">get release-confidence</span>
+              <span className="terminal-cursor text-primary">▋</span>
+            </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto"
-          >
-            {[
-              { value: "8min", label: "Avg Deploy Time" },
-              { value: "99.9%", label: "Uptime SLA" },
-              { value: "40%", label: "Cost Reduction" },
-            ].map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                className="text-center relative"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
+            <motion.h1
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.05 }}
+              className="mt-8 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl md:text-6xl xl:text-7xl"
+            >
+              Infrastructure for teams that need{" "}
+              <span className="text-primary text-glow-green">clean releases</span>, not more chaos.
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.12 }}
+              className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl"
+            >
+              DevOps Provider helps product and platform teams run stable on-prem and cloud
+              infrastructure, fix risky delivery systems, and leave behind workflows an experienced
+              internal team can sustain.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.2 }}
+              className="mt-10 flex flex-col gap-4 sm:flex-row"
+            >
+              <a
+                href="#contact"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 border-glow-green animate-pulse-glow"
               >
-                <div className="text-2xl md:text-3xl font-bold font-mono text-primary text-glow-green">{stat.value}</div>
-                <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
-              </motion.div>
-            ))}
+                Book Free Architecture Review
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+              <Link
+                to="/case-studies"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-border px-8 py-4 text-base font-medium text-foreground transition-all duration-300 hover:border-primary/30 hover:bg-secondary glass-card"
+              >
+                See Case Studies
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.28 }}
+              className="mt-12 grid gap-4 sm:grid-cols-3"
+            >
+              {heroStats.map((stat) => (
+                <div key={stat.label} className="rounded-2xl border border-border/70 bg-card/50 p-5 backdrop-blur-sm">
+                  <div className="font-mono text-3xl font-bold text-primary text-glow-green">
+                    {stat.value}
+                  </div>
+                  <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="relative"
+          >
+            <div className="rounded-[2rem] border border-border/70 bg-card/65 p-6 shadow-2xl backdrop-blur-xl">
+              <div className="flex items-center justify-between rounded-2xl border border-border/70 bg-background/50 px-4 py-3">
+                <div>
+                  <p className="font-mono text-xs text-primary">// release.control</p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Delivery visibility for engineering leaders
+                  </p>
+                </div>
+                <div className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                  Live
+                </div>
+              </div>
+
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                <div className="rounded-2xl border border-border/60 bg-background/40 p-5">
+                  <div className="flex items-center gap-3">
+                    <div className="rounded-xl bg-primary/10 p-2 text-primary">
+                      <GitBranch className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">Release pipeline</p>
+                      <p className="text-xs text-muted-foreground">From PR merge to production</p>
+                    </div>
+                  </div>
+                  <div className="mt-5 space-y-3">
+                    {releaseChecks.map((item) => (
+                      <div key={item} className="flex items-start gap-3">
+                        <div className="mt-1 h-2.5 w-2.5 rounded-full bg-primary" />
+                        <p className="text-sm leading-6 text-foreground/85">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-border/60 bg-background/40 p-5">
+                  <div className="flex items-center gap-3">
+                    <div className="rounded-xl bg-accent/10 p-2 text-accent">
+                      <Radar className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">Operational signals</p>
+                      <p className="text-xs text-muted-foreground">What changes once the platform is fixed</p>
+                    </div>
+                  </div>
+                  <div className="mt-5 grid gap-3">
+                    {[
+                      { label: "Failed rollout exposure", value: "-72%" },
+                      { label: "Deploy lead time", value: "8 min" },
+                      { label: "Incident response context", value: "Runbook-ready" },
+                    ].map((item) => (
+                      <div key={item.label} className="rounded-xl border border-border/50 bg-card/60 px-4 py-3">
+                        <p className="font-mono text-xs text-primary">{item.value}</p>
+                        <p className="mt-1 text-sm text-muted-foreground">{item.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-4 rounded-2xl border border-primary/20 bg-primary/5 p-5">
+                <div className="flex items-start gap-3">
+                  <div className="rounded-xl bg-primary/10 p-2 text-primary">
+                    <ShieldCheck className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">
+                      Built for teams that need execution, not slide decks
+                    </p>
+                    <p className="mt-2 text-sm leading-7 text-foreground/80">
+                      The work covers delivery pipelines, Kubernetes operations, observability,
+                      cost control, and the standards required to keep releases predictable.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
