@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Layers3, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
@@ -32,26 +33,26 @@ const Services = () => {
               </div>
 
               <h1 className="mt-6 text-4xl font-black tracking-tight md:text-6xl">
-                Delivery systems built for{" "}
-                <span className="text-primary text-glow-green">speed, safety, and scale</span>
+                Infrastructure services for teams that need{" "}
+                <span className="text-primary text-glow-green">clean releases</span>, not more chaos
               </h1>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
-                We help engineering teams reduce release risk, stabilize Kubernetes operations,
-                and improve both on-prem and cloud infrastructure with support from a team carrying
-                10+ years of delivery experience.
+                DevOps Provider helps product and platform teams run stable on-prem and cloud
+                infrastructure, fix risky delivery systems, and leave behind workflows an experienced
+                internal team can sustain.
               </p>
 
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
-                  href="/#contact"
+                  href="/contact"
                   className="group inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 border-glow-green"
                 >
                   Book Free Architecture Review
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
                 <a
-                  href="/#case-studies"
+                  href="/case-studies"
                   className="rounded-xl border border-border px-8 py-4 font-medium text-foreground transition-all duration-300 hover:border-primary/30 hover:bg-secondary"
                 >
                   See Case Studies
@@ -62,7 +63,7 @@ const Services = () => {
         </section>
 
         <section className="container px-6 py-12 md:py-16">
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {servicePackages.map((pkg, index) => (
               <motion.div
                 key={pkg.name}
@@ -146,6 +147,12 @@ const Services = () => {
                   </div>
                 ))}
               </div>
+              <Link
+                to="/ai-devops"
+                className="mt-8 inline-flex items-center justify-center rounded-xl border border-border px-6 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/30 hover:bg-secondary"
+              >
+                See AI for DevOps Offering
+              </Link>
             </motion.div>
 
             <motion.div

@@ -60,6 +60,19 @@ export const servicePackages: ServicePackage[] = [
     ],
     popular: false,
   },
+  {
+    name: "AI Ops Enablement",
+    timeline: "2-3 weeks",
+    deliverable: "Operational AI use-case plan with guardrails and implementation direction",
+    price: "$6-10K",
+    features: [
+      "AI use-case assessment",
+      "Runbook and search workflow design",
+      "Risk and governance controls",
+      "Implementation roadmap",
+    ],
+    popular: false,
+  },
 ];
 
 export const serviceCapabilities = [
@@ -69,6 +82,7 @@ export const serviceCapabilities = [
   "Infrastructure cost optimization and capacity planning",
   "Platform documentation, runbooks, and team enablement",
   "Security baseline hardening for delivery infrastructure",
+  "AI-assisted operations use cases with delivery-safe guardrails",
 ];
 
 export const serviceWorkflow = [

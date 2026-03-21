@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Shield, ArrowRight, Zap, Globe, Server } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -52,13 +53,13 @@ const TrustSection = () => {
               ))}
             </div>
 
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="group mt-8 inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 border-glow-green"
             >
               Book Free Architecture Review
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2">

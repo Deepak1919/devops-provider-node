@@ -1,5 +1,6 @@
 import { Check, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { servicePackages } from "@/data/services";
 
 const ServicesSection = () => {
@@ -23,19 +24,29 @@ const ServicesSection = () => {
             </p>
           </motion.div>
 
-          <motion.a
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08 }}
-            href="/services"
-            className="inline-flex items-center justify-center rounded-xl border border-border px-5 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/30 hover:bg-secondary"
+            className="flex flex-col gap-3 sm:flex-row"
           >
-            View Full Services Page
-          </motion.a>
+            <Link
+              to="/services"
+              className="inline-flex items-center justify-center rounded-xl border border-border px-5 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/30 hover:bg-secondary"
+            >
+              View Full Services Page
+            </Link>
+            <Link
+              to="/ai-devops"
+              className="inline-flex items-center justify-center rounded-xl border border-primary/20 bg-primary/5 px-5 py-3 text-sm font-medium text-primary transition-all duration-300 hover:border-primary/40"
+            >
+              AI for DevOps
+            </Link>
+          </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 max-w-7xl mx-auto">
           {servicePackages.map((pkg, i) => (
             <motion.div
               key={pkg.name}

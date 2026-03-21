@@ -125,7 +125,7 @@ const CaseStudies = () => {
               We will identify the highest-risk issues first and outline what needs to change in the platform, the pipeline, and the operating model.
             </p>
             <a
-              href="/#contact"
+              href="/contact"
               className="group mt-8 inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 border-glow-green"
             >
               Book Free Architecture Review

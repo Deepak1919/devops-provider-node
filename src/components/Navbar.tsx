@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import BrandLogo from "@/components/BrandLogo";
+import { primaryNavItems } from "@/data/navigation";
 import {
   Sheet,
   SheetClose,
@@ -11,12 +12,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
-const navItems = [
-  { label: "About", to: "/about" },
-  { label: "Services", to: "/services" },
-  { label: "Case Studies", to: "/case-studies" },
-];
 
 const Navbar = () => {
   return (
@@ -35,34 +30,22 @@ const Navbar = () => {
 
         {/* Navigation */}
         <div className="hidden md:flex items-center gap-8">
+          {primaryNavItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+            >
+              {item.label}
+            </Link>
+          ))}
 
           <Link
-            to="/about"
-            className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
-          >
-            About
-          </Link>
-
-          <Link
-            to="/services"
-            className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
-          >
-            Services
-          </Link>
-
-          <Link
-            to="/case-studies"
-            className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
-          >
-            Case Studies
-          </Link>
-
-          <a
-            href="/#contact"
+            to="/contact"
             className="text-sm px-5 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:scale-105 transition-all duration-300"
           >
             Get in Touch
-          </a>
+          </Link>
 
         </div>
 
@@ -86,7 +69,7 @@ const Navbar = () => {
             </SheetHeader>
 
             <div className="mt-8 flex flex-col gap-3">
-              {navItems.map((item) => (
+              {primaryNavItems.map((item) => (
                 <SheetClose asChild key={item.to}>
                   <Link
                     to={item.to}
@@ -98,12 +81,12 @@ const Navbar = () => {
               ))}
 
               <SheetClose asChild>
-                <a
-                  href="/#contact"
+                <Link
+                  to="/contact"
                   className="mt-2 inline-flex items-center justify-center rounded-xl bg-primary px-4 py-3 text-base font-medium text-primary-foreground"
                 >
                   Get in Touch
-                </a>
+                </Link>
               </SheetClose>
             </div>
           </SheetContent>

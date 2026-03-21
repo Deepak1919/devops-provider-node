@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { caseStudies } from "@/data/caseStudies";
 
 const techStack = [
@@ -89,12 +90,12 @@ const TechStackSection = () => {
           viewport={{ once: true }}
           className="mt-10 text-center"
         >
-          <a
-            href="/case-studies"
+          <Link
+            to="/case-studies"
             className="inline-flex items-center justify-center rounded-xl border border-border px-6 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary/30 hover:bg-secondary"
           >
             Open Full Case Studies
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

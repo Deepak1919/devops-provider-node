@@ -47,8 +47,8 @@ const HeroSection = () => {
               transition={{ duration: 0.55, delay: 0.05 }}
               className="mt-8 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl md:text-6xl xl:text-7xl"
             >
-              Infrastructure for teams that need{" "}
-              <span className="text-primary text-glow-green">clean releases</span>, not more chaos.
+              Delivery systems built for{" "}
+              <span className="text-primary text-glow-green">speed, safety, and scale</span>.
             </motion.h1>
 
             <motion.p
@@ -57,9 +57,9 @@ const HeroSection = () => {
               transition={{ duration: 0.55, delay: 0.12 }}
               className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl"
             >
-              DevOps Provider helps product and platform teams run stable on-prem and cloud
-              infrastructure, fix risky delivery systems, and leave behind workflows an experienced
-              internal team can sustain.
+              We help engineering teams reduce release risk, stabilize Kubernetes operations,
+              and improve both on-prem and cloud infrastructure with support from a team carrying
+              10+ years of delivery experience.
             </motion.p>
 
             <motion.div
@@ -76,10 +76,10 @@ const HeroSection = () => {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <Link
-                to="/case-studies"
+                to="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-border px-8 py-4 text-base font-medium text-foreground transition-all duration-300 hover:border-primary/30 hover:bg-secondary glass-card"
               >
-                See Case Studies
+                Talk to the Team
               </Link>
             </motion.div>
 
