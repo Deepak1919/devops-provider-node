@@ -2,11 +2,17 @@ import { motion } from "framer-motion";
 import { ArrowRight, Workflow } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { engagementTracks, processSteps } from "@/data/process";
 
 const HowWeWork = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="How We Work"
+        description="See how DevOps Provider approaches architecture review, implementation sprints, platform modernization, and operational handover."
+        path="/how-we-work"
+      />
       <Navbar />
 
       <main className="pt-24">

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, MessageCircle, PhoneCall } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 
 const contactCards = [
   {
@@ -30,6 +31,11 @@ const contactCards = [
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Contact DevOps Provider"
+        description="Contact DevOps Provider to discuss DevOps consulting, Kubernetes, hybrid cloud, AI-ops use cases, platform modernization, and incident-response improvements."
+        path="/contact"
+      />
       <Navbar />
 
       <main className="pt-24">

@@ -2,11 +2,17 @@ import { motion } from "framer-motion";
 import { ArrowRight, Cpu } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { aiDeliverables, aiPrinciples, aiUseCases } from "@/data/aiDevops";
 
 const AIDevOps = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="AI for DevOps"
+        description="AI-for-DevOps consulting focused on incident triage, runbook search, workflow automation, deployment risk scoring, and operational guardrails."
+        path="/ai-devops"
+      />
       <Navbar />
 
       <main className="pt-24">

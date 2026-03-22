@@ -2,11 +2,17 @@ import { motion } from "framer-motion";
 import { ArrowRight, BarChart3 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { caseStudies } from "@/data/caseStudies";
 
 const CaseStudies = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="DevOps Case Studies"
+        description="Review case studies covering release speed, infrastructure optimization, incident response improvement, and measurable DevOps outcomes."
+        path="/case-studies"
+      />
       <Navbar />
 
       <main className="pt-24">

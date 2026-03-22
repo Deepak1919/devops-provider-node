@@ -3,6 +3,7 @@ import { ArrowRight, Check, Layers3, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import {
   serviceCapabilities,
   servicePackages,
@@ -12,6 +13,11 @@ import {
 const Services = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="DevOps Services"
+        description="Explore DevOps Provider services including Kubernetes audits, CI/CD acceleration, platform build work, fractional DevOps support, and AI ops enablement."
+        path="/services"
+      />
       <Navbar />
 
       <main className="pt-24">

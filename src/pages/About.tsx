@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Briefcase, Rocket, ShieldCheck, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 
 const principles = [
   {
@@ -33,6 +34,11 @@ const milestones = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="About DevOps Provider"
+        description="Learn about DevOps Provider, a team focused on DevOps consulting, Kubernetes operations, hybrid infrastructure, and delivery systems that scale."
+        path="/about"
+      />
       <Navbar />
 
       <main className="pt-24">

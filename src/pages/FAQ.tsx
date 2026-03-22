@@ -2,12 +2,18 @@ import { motion } from "framer-motion";
 import { HelpCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { faqItems } from "@/data/faq";
 
 const FAQ = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="FAQ"
+        description="Answers to common questions about DevOps Provider services, hybrid infrastructure work, AI usage in DevOps, and project onboarding."
+        path="/faq"
+      />
       <Navbar />
 
       <main className="pt-24">
