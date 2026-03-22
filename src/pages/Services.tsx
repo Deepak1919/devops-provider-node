@@ -15,7 +15,7 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <Seo
         title="DevOps Services"
-        description="Explore DevOps Provider services including Kubernetes audits, CI/CD acceleration, platform build work, fractional DevOps support, and AI ops enablement."
+        description="Explore DevOps Provider services including Kubernetes audits, CI/CD acceleration, platform build work, DevOps support, and AI ops enablement."
         path="/services"
       />
       <Navbar />
@@ -45,8 +45,8 @@ const Services = () => {
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
                 DevOps Provider helps product and platform teams run stable on-prem and cloud
-                infrastructure, fix risky delivery systems, and leave behind workflows an experienced
-                internal team can sustain.
+                infrastructure, fix risky delivery systems, and provide ongoing DevOps support with
+                workflows an experienced internal team can sustain.
               </p>
 
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

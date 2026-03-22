@@ -10,9 +10,10 @@ const ServicesSection = () => {
       <div className="container px-6 relative z-10">
         <div className="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -36, y: 12 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
             className="max-w-2xl"
           >
             <p className="font-mono text-sm text-primary mb-3">// services.list()</p>
@@ -25,10 +26,10 @@ const ServicesSection = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 36, y: 12 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.08 }}
+            transition={{ duration: 0.5, delay: 0.08 }}
             className="flex flex-col gap-3 sm:flex-row"
           >
             <Link
@@ -50,10 +51,10 @@ const ServicesSection = () => {
           {servicePackages.map((pkg, i) => (
             <motion.div
               key={pkg.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -26 : 26, y: 24, rotate: i % 2 === 0 ? -1.2 : 1.2 }}
+              whileInView={{ opacity: 1, x: 0, y: 0, rotate: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ duration: 0.48, delay: i * 0.08 }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
               className={`relative p-6 rounded-xl flex flex-col transition-all duration-300 ${
                 pkg.popular

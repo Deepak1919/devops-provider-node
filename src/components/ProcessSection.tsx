@@ -8,9 +8,10 @@ const ProcessSection = () => {
       <div className="container px-6">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -40, y: 18 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
             className="rounded-[2rem] border border-border/60 bg-card/60 p-8 md:p-10"
           >
             <p className="font-mono text-sm text-primary">// delivery.process()</p>
@@ -19,23 +20,30 @@ const ProcessSection = () => {
             </h2>
 
             <div className="mt-8 space-y-6">
-              {processSteps.map((item) => (
-                <div key={item.step} className="flex gap-4">
+              {processSteps.map((item, index) => (
+                <motion.div
+                  key={item.step}
+                  initial={{ opacity: 0, x: -18 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.35, delay: index * 0.07 }}
+                  className="flex gap-4"
+                >
                   <div className="font-mono text-sm text-primary">{item.step}</div>
                   <div>
                     <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
                     <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.description}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 40, y: 18 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.08 }}
+            transition={{ duration: 0.55, delay: 0.08 }}
             className="rounded-[2rem] border border-primary/20 bg-primary/5 p-8 md:p-10"
           >
             <p className="font-mono text-sm text-primary">// engagement.options()</p>
@@ -43,11 +51,18 @@ const ProcessSection = () => {
               Engagements matched to the actual platform problem.
             </h2>
             <div className="mt-8 space-y-4">
-              {engagementTracks.map((track) => (
-                <div key={track.title} className="rounded-2xl border border-primary/10 bg-background/20 p-5">
+              {engagementTracks.map((track, index) => (
+                <motion.div
+                  key={track.title}
+                  initial={{ opacity: 0, x: 18 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.35, delay: index * 0.07 }}
+                  className="rounded-2xl border border-primary/10 bg-background/20 p-5"
+                >
                   <h3 className="text-lg font-semibold text-foreground">{track.title}</h3>
                   <p className="mt-2 text-sm leading-7 text-foreground/80">{track.description}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
 

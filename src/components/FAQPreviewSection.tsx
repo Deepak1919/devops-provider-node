@@ -9,9 +9,10 @@ const FAQPreviewSection = () => {
       <div className="container px-6">
         <div className="mx-auto max-w-4xl">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 28, scale: 0.98 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="text-center"
           >
             <p className="font-mono text-sm text-primary">// faq.list()</p>
@@ -24,10 +25,10 @@ const FAQPreviewSection = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 34, y: 18 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.08 }}
+            transition={{ duration: 0.52, delay: 0.08 }}
             className="mt-10 rounded-[2rem] border border-border bg-card/60 p-6 md:p-8"
           >
             <Accordion type="single" collapsible className="w-full">

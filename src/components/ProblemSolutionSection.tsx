@@ -46,9 +46,10 @@ const ProblemSolutionSection = () => {
       <div className="container px-6">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -40, y: 16 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
             className="lg:pr-8"
           >
             <p className="font-mono text-sm text-primary">// pain_points.resolve()</p>
@@ -84,10 +85,10 @@ const ProblemSolutionSection = () => {
             {problems.map((item, i) => (
               <motion.div
                 key={item.pain}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: i % 2 === 0 ? 36 : -36, y: 14 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
+                transition={{ duration: 0.45, delay: i * 0.08 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className="group rounded-2xl border border-border bg-card/55 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/30 gradient-border"
               >

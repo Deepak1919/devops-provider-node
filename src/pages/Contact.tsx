@@ -51,7 +51,8 @@ const Contact = () => {
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
               If delivery risk, infrastructure complexity, migration planning, or AI-ops use cases
-              are slowing your software company down, send the current bottleneck and we will help define the next step.
+              are slowing your software company down, or if you need ongoing DevOps support, send the
+              current bottleneck and we will help define the next step.
             </p>
           </motion.div>
         </section>
@@ -112,6 +113,7 @@ const Contact = () => {
                 {[
                   "Kubernetes reliability and platform hardening",
                   "CI/CD modernization and safer releases",
+                  "Ongoing DevOps support for platform and deployment teams",
                   "On-prem to cloud or hybrid migration planning",
                   "Observability and incident response improvements",
                   "AI use cases for operations and delivery workflows",

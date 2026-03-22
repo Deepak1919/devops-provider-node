@@ -16,7 +16,7 @@ const Footer = () => {
             </div>
 
             <p className="text-muted-foreground text-sm mb-6">
-              On-prem, cloud, hybrid infrastructure, and AI-for-DevOps consulting for software companies backed by a team with 10+ years of experience.
+              On-prem, cloud, hybrid infrastructure, AI-for-DevOps consulting, and ongoing DevOps support for software companies backed by a team with 10+ years of experience.
             </p>
 
             <div className="mb-6 flex flex-wrap gap-3 text-xs text-muted-foreground">

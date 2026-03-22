@@ -54,8 +54,8 @@ const HeroSection = () => {
               transition={{ duration: 0.55, delay: 0.05 }}
               className="mt-8 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl md:text-6xl xl:text-7xl"
             >
-              Delivery systems built for{" "}
-              <span className="text-primary text-glow-green">speed, safety, and scale</span>.
+              Ship faster on infrastructure that{" "}
+              <span className="text-primary text-glow-green">stays stable under pressure</span>.
             </motion.h1>
 
             <motion.p
@@ -64,9 +64,9 @@ const HeroSection = () => {
               transition={{ duration: 0.55, delay: 0.12 }}
               className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl"
             >
-              We help software companies and engineering teams reduce release risk, stabilize
-              Kubernetes operations, and improve both on-prem and cloud infrastructure with support
-              from a team carrying 10+ years of delivery experience.
+              We help software companies modernize DevOps, Kubernetes, and hybrid infrastructure so
+              releases move faster, incidents drop, and engineering teams can stay focused on product
+              with reliable implementation and ongoing DevOps support.
             </motion.p>
 
             <motion.div

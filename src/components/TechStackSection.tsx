@@ -1,11 +1,29 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { caseStudies } from "@/data/caseStudies";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const techStack = [
-  "Kubernetes", "Helm", "ArgoCD", "Gitlab CI", "Ansible",
-  "Terraform", "Proxmox", "Docker", "Prometheus",
-  "Grafana", "Istio", "Cilium", "Vault",
+  { name: "Kubernetes", category: "Container orchestration" },
+  { name: "Helm", category: "Package management" },
+  { name: "ArgoCD", category: "GitOps delivery" },
+  { name: "GitLab CI", category: "CI/CD pipelines" },
+  { name: "Jenkins", category: "Build and release automation" },
+  { name: "Ansible", category: "Automation" },
+  { name: "Terraform", category: "Infrastructure as code" },
+  { name: "Proxmox", category: "Private cloud" },
+  { name: "Docker", category: "Containers" },
+  { name: "Prometheus", category: "Metrics and monitoring" },
+  { name: "Grafana", category: "Observability dashboards" },
+  { name: "Istio", category: "Service mesh" },
+  { name: "Cilium", category: "Networking and security" },
+  { name: "Vault", category: "Secrets management" },
 ];
 
 const TechStackSection = () => {
@@ -29,21 +47,39 @@ const TechStackSection = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-          {techStack.map((tech, i) => (
-            <motion.span
-              key={tech}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              whileHover={{ scale: 1.1, y: -2 }}
-              className="px-5 py-2.5 rounded-xl border border-border bg-card/60 backdrop-blur-sm font-mono text-sm text-secondary-foreground hover:border-primary/40 hover:text-primary hover:bg-primary/5 transition-all duration-300 cursor-default"
-            >
-              {tech}
-            </motion.span>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.08 }}
+          className="mx-auto mt-10 max-w-6xl px-12"
+        >
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {techStack.map((tool) => (
+                <CarouselItem
+                  key={tool.name}
+                  className="basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+                >
+                  <div className="h-full rounded-2xl border border-border bg-card/60 p-6 backdrop-blur-sm gradient-border">
+                    <p className="font-mono text-xs text-primary">// tool.stack</p>
+                    <h3 className="mt-4 text-2xl font-semibold text-foreground">{tool.name}</h3>
+                    <p className="mt-3 text-sm leading-7 text-muted-foreground">{tool.category}</p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+
+            <CarouselPrevious className="left-0 border-border bg-card/80 text-foreground hover:bg-secondary" />
+            <CarouselNext className="right-0 border-border bg-card/80 text-foreground hover:bg-secondary" />
+          </Carousel>
+        </motion.div>
 
         <div className="mt-20 grid gap-6 lg:grid-cols-3">
           {caseStudies.map((study, index) => (

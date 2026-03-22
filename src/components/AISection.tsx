@@ -11,9 +11,10 @@ const AISection = () => {
       <div className="container relative z-10 px-6">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -42, y: 18 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
             className="max-w-xl"
           >
             <p className="font-mono text-sm text-primary">// ai_for_devops()</p>
@@ -47,10 +48,10 @@ const AISection = () => {
             {aiUseCases.slice(0, 4).map(({ icon: Icon, title, description }, index) => (
               <motion.div
                 key={title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? 34 : -34, y: 18 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
+                transition={{ duration: 0.46, delay: index * 0.08 }}
                 className="rounded-2xl border border-border bg-card/55 p-6 backdrop-blur-sm gradient-border"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">

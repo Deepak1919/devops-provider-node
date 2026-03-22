@@ -50,10 +50,11 @@ export const servicePackages: ServicePackage[] = [
   {
     name: "Fractional DevOps",
     timeline: "Monthly",
-    deliverable: "Ongoing SRE and platform support for delivery teams",
+    deliverable: "Ongoing DevOps, SRE, and platform support for delivery teams",
     price: "$5-8K/mo",
     features: [
       "Dedicated SRE hours",
+      "DevOps support for releases and platform operations",
       "Incident response",
       "Continuous optimization",
       "Quarterly reviews",
@@ -78,6 +79,7 @@ export const servicePackages: ServicePackage[] = [
 export const serviceCapabilities = [
   "Kubernetes architecture and operations",
   "CI/CD modernization and release safety",
+  "Ongoing DevOps support for release engineering and platform operations",
   "Observability, incident response, and SRE practices",
   "Infrastructure cost optimization and capacity planning",
   "Platform documentation, runbooks, and team enablement",
@@ -100,8 +102,20 @@ export const serviceWorkflow = [
   },
   {
     step: "03",
+    title: "Stabilize",
+    description:
+      "We validate the new workflows, strengthen observability, and reduce operational surprises before handover.",
+  },
+  {
+    step: "04",
     title: "Handover",
     description:
       "We leave behind documentation, runbooks, and working practices your team can sustain.",
+  },
+  {
+    step: "05",
+    title: "Support",
+    description:
+      "Where needed, we continue with DevOps support, optimization, and review cycles so the platform keeps improving after launch.",
   },
 ];
