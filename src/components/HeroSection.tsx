@@ -10,7 +10,7 @@ const heroStats = [
 
 const globalSignals = [
   "Serving clients globally 🌍",
-  "Supporting software companies worldwide",
+  "Supporting teams worldwide",
   "Remote DevOps support worldwide",
   "Available across all time zones",
 ];
@@ -54,8 +54,8 @@ const HeroSection = () => {
               transition={{ duration: 0.55, delay: 0.05 }}
               className="mt-8 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl md:text-6xl xl:text-7xl"
             >
-              Ship faster on infrastructure that{" "}
-              <span className="text-primary text-glow-green">stays stable under pressure</span>.
+              <span className="text-primary text-glow-green">DevOps consulting services</span> for
+              teams that need reliable delivery.
             </motion.h1>
 
             <motion.p
@@ -64,9 +64,10 @@ const HeroSection = () => {
               transition={{ duration: 0.55, delay: 0.12 }}
               className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl"
             >
-              We help software companies modernize DevOps, Kubernetes, and hybrid infrastructure so
-              releases move faster, incidents drop, and engineering teams can stay focused on product
-              with reliable implementation and ongoing DevOps support.
+              As a DevOps service provider, we help startups, SaaS teams, internal IT teams, and
+              growing businesses with Kubernetes consulting, CI/CD automation services, and hybrid
+              infrastructure delivery. We build stable release systems, reduce incident pressure, and
+              provide reliable ongoing DevOps support across on-prem and cloud environments.
             </motion.p>
 
             <motion.div

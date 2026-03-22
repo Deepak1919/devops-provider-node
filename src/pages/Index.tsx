@@ -14,8 +14,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="DevOps Consulting for Software Companies"
-        description="We help software companies improve DevOps, Kubernetes, and hybrid infrastructure so releases move faster, operations stay stable, and teams scale with confidence."
+        title="DevOps Service Provider | DevOps Consulting Services | Kubernetes Consulting"
+        description="DevOps service provider offering DevOps consulting services, Kubernetes consulting, CI/CD automation services, and ongoing support for teams and businesses worldwide."
         path="/"
         structuredData={{
           "@context": "https://schema.org",

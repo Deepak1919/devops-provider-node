@@ -4,9 +4,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import CustomCursor from "@/components/CustomCursor";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import AIDevOps from "./pages/AIDevOps";
+import Blog from "./pages/Blog";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
@@ -29,6 +31,7 @@ const ScrollToTop = () => {
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <CustomCursor />
       <Toaster />
       <Sonner />
       <BrowserRouter>
@@ -37,6 +40,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/ai-devops" element={<AIDevOps />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/how-we-work" element={<HowWeWork />} />
           <Route path="/services" element={<Services />} />
           <Route path="/service" element={<Services />} />

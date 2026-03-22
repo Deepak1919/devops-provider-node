@@ -14,8 +14,8 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="DevOps Services"
-        description="Explore DevOps Provider services including Kubernetes audits, CI/CD acceleration, platform build work, DevOps support, and AI ops enablement."
+        title="DevOps Support Services | Kubernetes Consulting | CI/CD Automation Services"
+        description="Professional DevOps support services delivering DevOps consulting services, Kubernetes consulting, CI/CD automation services, and ongoing platform support for software teams."
         path="/services"
       />
       <Navbar />
@@ -39,14 +39,18 @@ const Services = () => {
               </div>
 
               <h1 className="mt-6 text-4xl font-black tracking-tight md:text-6xl">
-                Infrastructure services for teams that need{" "}
-                <span className="text-primary text-glow-green">clean releases</span>, not more chaos
+                Professional{" "}
+                <span className="text-primary text-glow-green">
+                  DevOps support, Kubernetes consulting, and CI/CD automation services
+                </span>
               </h1>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
-                DevOps Provider helps product and platform teams run stable on-prem and cloud
-                infrastructure, fix risky delivery systems, and provide ongoing DevOps support with
-                workflows an experienced internal team can sustain.
+                DevOps Provider delivers DevOps consulting services for startups, product teams,
+                internal IT teams, and businesses running on-prem, hybrid, and cloud infrastructure.
+                We provide hands-on DevOps support with practical implementation, Kubernetes
+                consulting, CI/CD automation services, and ongoing support your internal team can
+                sustain.
               </p>
 
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -141,7 +145,7 @@ const Services = () => {
               <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
                 We work across colocated and on-prem environments, private infrastructure, and public
                 cloud platforms. The focus is the same in each case: resilient systems, safer releases,
-                and cleaner operations.
+                and cleaner operations backed by DevOps consulting services and ongoing support.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {serviceCapabilities.map((capability) => (

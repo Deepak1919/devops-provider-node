@@ -51,8 +51,8 @@ const Contact = () => {
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
               If delivery risk, infrastructure complexity, migration planning, or AI-ops use cases
-              are slowing your software company down, or if you need ongoing DevOps support, send the
-              current bottleneck and we will help define the next step.
+              are slowing your team down, or if you need ongoing DevOps support, send the current
+              bottleneck and we will help define the next step.
             </p>
           </motion.div>
         </section>
@@ -142,7 +142,7 @@ const Contact = () => {
                 Serving clients globally 🌍
               </span>
               <span className="rounded-full border border-primary/10 bg-background/20 px-4 py-2">
-                Supporting software companies worldwide
+                Supporting teams worldwide
               </span>
               <span className="rounded-full border border-primary/10 bg-background/20 px-4 py-2">
                 Remote DevOps support worldwide
