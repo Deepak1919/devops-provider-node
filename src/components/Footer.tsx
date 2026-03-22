@@ -16,8 +16,15 @@ const Footer = () => {
             </div>
 
             <p className="text-muted-foreground text-sm mb-6">
-              On-prem, cloud, hybrid infrastructure, and AI-for-DevOps consulting backed by a team with 10+ years of experience.
+              On-prem, cloud, hybrid infrastructure, and AI-for-DevOps consulting for software companies backed by a team with 10+ years of experience.
             </p>
+
+            <div className="mb-6 flex flex-wrap gap-3 text-xs text-muted-foreground">
+              <span className="rounded-full border border-border/60 px-3 py-1.5">Serving clients globally 🌍</span>
+              <span className="rounded-full border border-border/60 px-3 py-1.5">Supporting software companies worldwide</span>
+              <span className="rounded-full border border-border/60 px-3 py-1.5">Remote DevOps support worldwide</span>
+              <span className="rounded-full border border-border/60 px-3 py-1.5">Available across all time zones</span>
+            </div>
 
             <div className="grid gap-3 text-sm">
               <p>

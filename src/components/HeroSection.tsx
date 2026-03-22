@@ -8,6 +8,13 @@ const heroStats = [
   { value: "8m", label: "Typical deploy window" },
 ];
 
+const globalSignals = [
+  "Serving clients globally 🌍",
+  "Supporting software companies worldwide",
+  "Remote DevOps support worldwide",
+  "Available across all time zones",
+];
+
 const releaseChecks = [
   "Pre-deploy validation and rollback paths",
   "GitOps promotion across environments",
@@ -57,9 +64,9 @@ const HeroSection = () => {
               transition={{ duration: 0.55, delay: 0.12 }}
               className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl"
             >
-              We help engineering teams reduce release risk, stabilize Kubernetes operations,
-              and improve both on-prem and cloud infrastructure with support from a team carrying
-              10+ years of delivery experience.
+              We help software companies and engineering teams reduce release risk, stabilize
+              Kubernetes operations, and improve both on-prem and cloud infrastructure with support
+              from a team carrying 10+ years of delivery experience.
             </motion.p>
 
             <motion.div
@@ -95,6 +102,22 @@ const HeroSection = () => {
                     {stat.value}
                   </div>
                   <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>
+                </div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.34 }}
+              className="mt-8 flex flex-wrap gap-3"
+            >
+              {globalSignals.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-full border border-border/70 bg-card/50 px-4 py-2 text-sm text-muted-foreground backdrop-blur-sm"
+                >
+                  {item}
                 </div>
               ))}
             </motion.div>

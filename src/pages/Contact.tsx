@@ -51,7 +51,7 @@ const Contact = () => {
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
               If delivery risk, infrastructure complexity, migration planning, or AI-ops use cases
-              are slowing the team down, send the current bottleneck and we will help define the next step.
+              are slowing your software company down, send the current bottleneck and we will help define the next step.
             </p>
           </motion.div>
         </section>
@@ -123,6 +123,33 @@ const Contact = () => {
               </div>
             </motion.div>
           </div>
+        </section>
+
+        <section className="container px-6 pb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-[2rem] border border-primary/20 bg-primary/5 p-8 text-center md:p-10"
+          >
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
+              Global Availability
+            </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm text-foreground/85">
+              <span className="rounded-full border border-primary/10 bg-background/20 px-4 py-2">
+                Serving clients globally 🌍
+              </span>
+              <span className="rounded-full border border-primary/10 bg-background/20 px-4 py-2">
+                Supporting software companies worldwide
+              </span>
+              <span className="rounded-full border border-primary/10 bg-background/20 px-4 py-2">
+                Remote DevOps support worldwide
+              </span>
+              <span className="rounded-full border border-primary/10 bg-background/20 px-4 py-2">
+                Available across all time zones
+              </span>
+            </div>
+          </motion.div>
         </section>
       </main>
 
