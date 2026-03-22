@@ -16,8 +16,13 @@ const ProcessSection = () => {
           >
             <p className="font-mono text-sm text-primary">// delivery.process()</p>
             <h2 className="mt-4 text-3xl font-bold md:text-4xl">
-              Clean process, direct implementation, fast path to value.
+              Step-by-step DevOps consulting and support process.
             </h2>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
+              Our process is designed to move from architecture review into implementation quickly,
+              without skipping the controls that keep delivery safe. Each step is tied to release
+              stability, operational clarity, and a smoother handoff for your team.
+            </p>
 
             <div className="mt-8 space-y-6">
               {processSteps.map((item, index) => (

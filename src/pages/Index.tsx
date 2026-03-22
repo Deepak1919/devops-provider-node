@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Seo from "@/components/Seo";
 import HeroSection from "@/components/HeroSection";
+import DevOpsOverviewSection from "@/components/DevOpsOverviewSection";
+import IndustriesSection from "@/components/IndustriesSection";
 import ProblemSolutionSection from "@/components/ProblemSolutionSection";
 import ServicesSection from "@/components/ServicesSection";
 import AISection from "@/components/AISection";
@@ -14,8 +16,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="DevOps Service Provider | DevOps Consulting Services | Kubernetes Consulting"
-        description="DevOps service provider offering DevOps consulting services, Kubernetes consulting, CI/CD automation services, and ongoing support for teams and businesses worldwide."
+        title="DevOps Service Provider | DevOps Support & Consulting for Global Businesses"
+        description="DevOps service provider delivering DevOps services, DevOps consulting, DevOps support, Kubernetes consulting, and CI/CD automation services for global businesses."
         path="/"
         structuredData={{
           "@context": "https://schema.org",
@@ -31,11 +33,13 @@ const Index = () => {
       />
       <Navbar />
       <HeroSection />
+      <DevOpsOverviewSection />
       <ProblemSolutionSection />
       <ServicesSection />
       <AISection />
       <ProcessSection />
       <TechStackSection />
+      <IndustriesSection />
       <FAQPreviewSection />
       <TrustSection />
       <Footer />

@@ -54,8 +54,10 @@ const HeroSection = () => {
               transition={{ duration: 0.55, delay: 0.05 }}
               className="mt-8 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl md:text-6xl xl:text-7xl"
             >
-              <span className="text-primary text-glow-green">DevOps consulting services</span> for
-              teams that need reliable delivery.
+              DevOps Service Provider
+              <span className="block text-primary text-glow-green">
+                DevOps Support & Consulting for Global Businesses
+              </span>
             </motion.h1>
 
             <motion.p
@@ -64,11 +66,28 @@ const HeroSection = () => {
               transition={{ duration: 0.55, delay: 0.12 }}
               className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl"
             >
-              As a DevOps service provider, we help startups, SaaS teams, internal IT teams, and
-              growing businesses with Kubernetes consulting, CI/CD automation services, and hybrid
-              infrastructure delivery. We build stable release systems, reduce incident pressure, and
-              provide reliable ongoing DevOps support across on-prem and cloud environments.
+              As a DevOps service provider, we deliver DevOps services, DevOps consulting, and
+              DevOps support for startups, internal IT teams, SaaS platforms, and growing businesses.
+              We help with Kubernetes consulting, CI/CD automation services, and hybrid
+              infrastructure delivery so releases stay safer and operations stay predictable across
+              on-prem and cloud environments.
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.16 }}
+              className="mt-6 flex flex-wrap gap-3"
+            >
+              {["DevOps services", "DevOps consulting", "DevOps support"].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm text-foreground"
+                >
+                  {item}
+                </div>
+              ))}
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 28 }}

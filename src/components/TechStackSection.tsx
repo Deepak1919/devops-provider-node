@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 
 const techStack = [
+  { name: "AWS", category: "Cloud infrastructure and managed services" },
   { name: "Kubernetes", category: "Container orchestration" },
   { name: "Helm", category: "Package management" },
   { name: "ArgoCD", category: "GitOps delivery" },
@@ -42,8 +43,10 @@ const TechStackSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Tooling is only useful when it produces <span className="text-primary text-glow-green">measurable change</span>
           </h2>
-          <p className="text-muted-foreground">
-            The stack matters, but the outcome matters more. These are the systems we work in and the kinds of results we are hired to deliver.
+          <p className="text-muted-foreground leading-7">
+            We regularly work with AWS, Docker, Kubernetes, Jenkins, GitOps tooling, observability
+            platforms, and infrastructure automation. The stack matters, but the outcome matters
+            more. These are the systems we work in and the kinds of results we are hired to deliver.
           </p>
         </motion.div>
 

@@ -18,10 +18,13 @@ const ServicesSection = () => {
           >
             <p className="font-mono text-sm text-primary mb-3">// services.list()</p>
             <h2 className="text-3xl font-bold md:text-4xl">
-              Productized packages for teams that want <span className="text-primary text-glow-green">execution</span>
+              DevOps services built for <span className="text-primary text-glow-green">execution</span>
             </h2>
-            <p className="mt-4 text-muted-foreground">
-              Defined scope, fixed timelines, and delivery work that maps to the actual platform problem.
+            <p className="mt-4 text-muted-foreground leading-7">
+              These DevOps services cover Kubernetes consulting, CI/CD automation services,
+              platform engineering, observability, infrastructure modernization, and ongoing DevOps
+              support. Each engagement is scoped around a real delivery problem instead of a generic
+              tool rollout.
             </p>
           </motion.div>
 
